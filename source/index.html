@@ -6,9 +6,10 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo"></a>
+      <a class="page-header__logo">Pink</a>
       <nav class="main-nav">
         <div class="main-nav__wrapper">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
               <a>Главная</a>
@@ -24,15 +25,13 @@
             </li>
           </ul>
         </div>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        </div>
       </nav>
     </header>
     <main class="page-main">
       <h1 class="vissually-hidden">Мобильное приложение "Пинк" - Взгляните на жизнь иначе!</h1>
       <section class="content">
         <img class="content__phone" src="img/phone.png" alt="телефон">
-        <button class="content__button button" type="button" href="https://www.apple.com/itunes/working-itunes/market/">Скачать приложение</button>
+        <a class="content__link button" type="button" href="https://www.apple.com/itunes/working-itunes/market/">Скачать приложение</a>
         <div class="content__system system">
           <ul class="system__list">
             <li class="system__item">
@@ -49,6 +48,7 @@
         <small class="content__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</small>
       </section>
       <section class="promo">
+        <h2 class="vissually-hidden">Преимущества нашего приложения</h2>
         <b class="promo__slogan">Устали от серости мегаполиса?</b><br>
         <b class="promo__slogan">Нам есть, что вам предложить!</b>
         <ul class="promo__list feature">
@@ -65,7 +65,11 @@
             <p class="feature__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
+        <img class="feature__image" src="img/hello-phone.png">
       </section>
+
+        <!-- Остальное верстать пока не надо -->
+
     </main>
   </body>
 </html>
