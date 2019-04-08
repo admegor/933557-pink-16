@@ -5,8 +5,73 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
+    <header class="page-header">
+      <a class="page-header__logo">Pink</a>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a href="htmlacademy.html">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="vissually-hidden">Мобильное приложение "Пинк" - Взгляните на жизнь иначе!</h1>
+      <section class="content">
+        <div class="content__wrapper">
+          <img class="content__phone" src="img/phone.png" alt="телефон">
+          <div class="content__apps apps">
+            <a class="content__link button" href="https://www.apple.com/itunes/working-itunes/market/">Скачать приложение</a>
+            <ul class="apps__list">
+              <li class="apps__item">
+                <a class="apps-link apps__link--iOS" href="https://www.apple.com/itunes/working-itunes/market/">Скачать для iOS</a>
+              </li>
+              <li class="apps__item">
+                <a class="apps-link apps__link--android" href="https://play.google.com/store">Скачать для android</a>
+              </li>
+              <li class="apps__item">
+                <a class="apps-link apps__link--windows" href="https://www.microsoft.com/ru-ru/store/apps">Скачать для windows</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <small class="content__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</small>
+      </section>
+      <section class="promo">
+        <h2 class="vissually-hidden">Преимущества нашего приложения</h2>
+        <b class="promo__slogan">Устали от серости мегаполиса?</b><br>
+        <b class="promo__slogan">Нам есть, что вам предложить!</b>
+        <ul class="promo__list feature">
+          <li class="feature__item">
+            <h3 class="feature__header">Поднимает настроение</h3>
+            <p class="feature__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="feature__item">
+            <h3 class="feature__header">Меняет мир вокруг</h3>
+            <p class="feature__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="feature__item">
+            <h3 class="feature__header">Заводит новых друзей</h3>
+            <p class="feature__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+        <img class="feature__image" src="img/hello-phone.png">
+      </section>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+        <!-- Остальное верстать пока не надо -->
 
+    </main>
   </body>
 </html>
