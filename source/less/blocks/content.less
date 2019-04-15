@@ -1,6 +1,25 @@
-.content__apps {
-    background-color: #1d2631;
-}
-.content__wrapper {
-    background: url(/img/bg-back-mobile@1x.jpg) no-repeat 50% 50%;
+.content {
+    &__apps {
+        background-color: #1d2631;
+    }
+    
+    &__wrapper {    
+        background: url(/img/bg-back-mobile@1x.jpg) no-repeat 50% 50%;
+        background-size: cover;
+    }
+    &__phone {
+        display: block;
+        bottom: 0;
+        padding-top: 50px;
+    }
+
+    &__description {
+        .reset;
+        font-size: 14px;
+        line-height: 24px;
+        color: @white;
+        text-align: center;
+
+        padding-bottom: 36px;
+    }
 }
