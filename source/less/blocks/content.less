@@ -1,25 +1,22 @@
-.content {
-    &__apps {
-        background-color: #1d2631;
-    }
-    
-    &__wrapper {    
-        background: url(/img/bg-back-mobile@1x.jpg) no-repeat 50% 50%;
-        background-size: cover;
-    }
-    &__phone {
-        display: block;
-        bottom: 0;
-        padding-top: 50px;
-    }
+.content__apps {
+  background-color: @nightblue;
+}
 
-    &__description {
-        .reset;
-        font-size: 14px;
-        line-height: 24px;
-        color: @white;
-        text-align: center;
+.content__wrapper {
+  background: url(/img/bg-back-mobile@1x.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+.content__phone {
+  display: block;
+  bottom: 0;
+}
 
-        padding-bottom: 36px;
-    }
+.content__description {
+  .reset;
+  font-size: 14px;
+  line-height: 24px;
+  color: @white;
+  text-align: center;
+
+  padding-bottom: 36px;
 }
