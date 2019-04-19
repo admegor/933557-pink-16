@@ -2,4 +2,19 @@
   display: flex;
   justify-content: space-between;
   min-height: 50px;
+
+  background-color: @cosmos;
+}
+
+.main-nav {
+  background-color: @cosmos;
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+  }
 }

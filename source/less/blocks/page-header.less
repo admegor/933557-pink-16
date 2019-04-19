@@ -1,5 +1,6 @@
 .page-header {
-  background-color: @cosmos;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__link {
@@ -8,4 +9,15 @@
 
 .page-header__logo {
   vertical-align: top;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    min-height: 110px;
+  }
+
+  .page-header__link img {
+    width: 147px;
+    height: 40px;
+  }
 }

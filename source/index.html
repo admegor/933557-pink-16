@@ -10,35 +10,38 @@
   </head>
   <body>
     <header class="page-header">
+      <div class="main-nav__wrapper">
+       <div class="main-nav__header">
+         <a class="page-header__link">
+          <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
+        </a>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav">
-        <div class="main-nav__header">
-          <a class="page-header__link">
-            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
-          </a>
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        </div>
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a>Главная</a>
-            </li>
+         <ul class="main-nav__list site-list">
+           <li class="site-list__item site-list__item--active">
+             <a>Главная</a>
+           </li>
             <li class="site-list__item">
-              <a href="photo.html">Фотографии</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Конкурс</a>
-            </li>
-            <li class="site-list__item">
-              <a href="htmlacademy.html">HTML Academy</a>
+             <a href="photo.html">Фотографии</a>
+           </li>
+           <li class="site-list__item">
+             <a href="form.html">Конкурс</a>
+           </li>
+           <li class="site-list__item">
+             <a href="htmlacademy.html">HTML Academy</a>
             </li>
           </ul>
+        </div>
       </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Мобильное приложение "Пинк" - Взгляните на жизнь иначе!</h1>
       <section class="content">
         <div class="content__wrapper">
-          <img class="content__phone" src="img/iphone-hand-mobile@1x.png" alt="телефон" width="258px" height="268px">
+          <div class="content__phone"></div>
           <div class="content__apps apps">
+            <p class="apps__slogan">Взгляните<br> на жизнь<br> иначе!</p>
             <a class="content__link button button--ellipse" href="https://www.apple.com/itunes/working-itunes/market/">Скачать приложение</a>
             <div class="apps__list-wrapper">
               <ul class="apps__list">

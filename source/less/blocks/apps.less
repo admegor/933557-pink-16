@@ -23,3 +23,22 @@
 .apps__link {
   font-size: 0;
 }
+
+.apps__slogan {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .apps__slogan {
+    display: block;
+    .reset;
+
+    font-family: "OpenSanslight", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+
+    color: @white;
+  }
+}
