@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru" dir="ltr">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Пинк — Фотографии</title>
+    <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__link" href="index.html">
-        <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
-      </a>
       <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__header">
+          <a class="page-header__link" href="index.html">
+            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item  site-list__item--active">
               <a>Фотографии</a>
             </li>
             <li class="site-list__item">
@@ -27,7 +31,6 @@
               <a href="htmlacademy.html">HTML Academy</a>
             </li>
           </ul>
-        </div>
       </nav>
     </header>
     <main class="page-photo">

@@ -4,15 +4,19 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__link">
-        <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
-      </a>
       <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__header">
+          <a class="page-header__link">
+            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
               <a>Главная</a>
@@ -27,7 +31,6 @@
               <a href="htmlacademy.html">HTML Academy</a>
             </li>
           </ul>
-        </div>
       </nav>
     </header>
     <main class="page-main">
@@ -37,23 +40,25 @@
           <img class="content__phone" src="img/iphone-hand-mobile@1x.png" alt="телефон" width="258px" height="268px">
           <div class="content__apps apps">
             <a class="content__link button button--ellipse" href="https://www.apple.com/itunes/working-itunes/market/">Скачать приложение</a>
-            <ul class="apps__list">
-              <li class="apps__item">
-                <a class="apps__link" href="https://www.apple.com/itunes/working-itunes/market/">
-                  <img class="apps__icon apps__icon--iOS" src="img/logo-apple.svg" width="47" height="56"alt="Apple">
-                </a>
-              </li>
-              <li class="apps__item">
-                <a class="apps__link" href="https://play.google.com/store">
-                  <img class="apps__icon apps__icon--android" src="img/logo-android.svg" width="43" height="47"alt="Android">
-                </a>
-              </li>
-              <li class="apps__item">
-                <a class="apps__link" href="https://www.microsoft.com/ru-ru/store/apps">
-                  <img class="apps__icon apps__icon--windows" src="img/logo-microsoft.svg" width="44" height="41"alt="Microsoft">
-                </a>
-              </li>
-            </ul>
+            <div class="apps__list-wrapper">
+              <ul class="apps__list">
+                <li class="apps__item">
+                  <a class="apps__link" href="https://www.apple.com/itunes/working-itunes/market/">Скачать для iOS
+                    <img class="apps__icon apps__icon--iOS" src="img/logo-apple.svg" width="47" height="56"alt="Apple">
+                  </a>
+                </li>
+                <li class="apps__item">
+                  <a class="apps__link" href="https://play.google.com/store">Скачать для android
+                    <img class="apps__icon apps__icon--android" src="img/logo-android.svg" width="43" height="47"alt="Android">
+                  </a>
+                </li>
+                <li class="apps__item">
+                  <a class="apps__link" href="https://www.microsoft.com/ru-ru/store/apps">Скачать для windows
+                    <img class="apps__icon apps__icon--windows" src="img/logo-microsoft.svg" width="44" height="41"alt="Microsoft">
+                  </a>
+                </li>
+              </ul>
+            </div>
             <p class="content__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
           </div>
         </div>
