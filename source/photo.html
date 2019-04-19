@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru" dir="ltr">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">Pink</a>
       <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__header">
+          <a class="page-header__link" href="index.html">
+            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item  site-list__item--active">
               <a>Фотографии</a>
             </li>
             <li class="site-list__item">
@@ -24,29 +31,32 @@
               <a href="htmlacademy.html">HTML Academy</a>
             </li>
           </ul>
-        </div>
       </nav>
     </header>
     <main class="page-photo">
-      <h1 class="page-photo__header">Фотографии пользователей</h1>
+      <div class="page-photo__wrapper">
+        <h1 class="page-photo__header">Фотографии<br> пользователей</h1>
+      </div>
       <section class="gallery">
-        <b class="gallery__intro">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</b>
+        <div class="gallery__intro-wrapper">
+            <b class="gallery__intro">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</b>
+        </div>
         <div class="gallery__wrapper">
+          <div class="gallery__popular">
+            <img class="gallery__photo-popular" src="img/panorama-mobile@1x.jpg" width="320px" height="137px" alt="фото панорамы дня">
+            <div class="gallery__comment comment-gallery">
+              <div class="comment-gallery__header">
+                <b class="comment-gallery__author">Анна</b>
+                <span class="comment-gallery__time-ago">(5 минут назад)</span>
+              </div>
+              <p class="comment-gallery__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <button class="comment-gallery__like" type="button" name="like"></button>
+              <span class="comment-gallery__like-count">Нравится:215</span>
+            </div>
+          </div>
           <ul class="gallery__list">
             <li class="gallery__item">
-              <img class="gallery__photo gallery__photo--popular" src="img/panorama-mobile.jpg" width="320px" height="137px" alt="фото панорамы дня">
-              <div class="gallery__comment comment-gallery">
-                <div class="comment-gallery__header">
-                  <b class="comment-gallery__author">Анна</b>
-                  <span class="comment-gallery__time-ago">(5 минут назад)</span>
-                </div>
-                <p class="comment-gallery__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                <button class="comment-gallery__like" type="button" name="like"></button>
-                <span class="comment-gallery__like-count">Нравится:215</span>
-              </div>
-            </li>
-            <li class="gallery__item">
-              <img class="gallery__photo" src="img/photo-1-mobile.jpg" width="280px" height="180px" alt="съемка авто">
+              <img class="gallery__photo" src="img/photo-car-mobile@1x.jpg" width="280px" height="180px" alt="съемка авто">
               <div class="gallery__comment comment-gallery">
                 <div class="comment-gallery__header">
                   <b class="comment-gallery__author">Левон</b>
@@ -58,7 +68,7 @@
               </div>
             </li>
             <li class="gallery__item">
-              <img class="gallery__photo" src="img/photo-2-mobile.jpg" width="280px" height="180px" alt="съемка авто">
+              <img class="gallery__photo" src="img/photo-drumset-mobile@1x.jpg" width="280px" height="180px" alt="съемка авто">
               <div class="gallery__comment comment-gallery">
                 <div class="comment-gallery__header">
                   <b class="comment-gallery__author">Антон</b>
@@ -70,7 +80,7 @@
               </div>
             </li>
             <li class="gallery__item">
-              <img class="gallery__photo" src="img/photo-3-mobile.jpg" width="280px" height="180px" alt="отражение">
+              <img class="gallery__photo" src="img/photo-window-mobile@1x.jpg" width="280px" height="180px" alt="отражение">
               <div class="gallery__comment comment-gallery">
                 <div class="comment-gallery__header">
                   <b class="comment-gallery__author">Борис</b>
@@ -82,7 +92,7 @@
               </div>
             </li>
             <li class="gallery__item">
-              <img class="gallery__photo" src="img/photo-4-mobile.jpg" width="280px" height="180px" alt="Кубанская бахча">
+              <img class="gallery__photo" src="img/photo-fair-mobile@1x.jpg" width="280px" height="180px" alt="Кубанская бахча">
               <div class="gallery__comment comment-gallery">
                 <div class="comment-gallery__header">
                   <b class="comment-gallery__author">Сергей</b>
@@ -94,7 +104,7 @@
               </div>
             </li>
             <li class="gallery__item">
-              <img class="gallery__photo" src="img/photo-5-mobile.jpg" width="280px" height="180px" alt="поход">
+              <img class="gallery__photo" src="img/photo-pov-mobile@1x.jpg" width="280px" height="180px" alt="поход">
               <div class="gallery__comment comment-gallery">
                 <div class="comment-gallery__header">
                   <b class="comment-gallery__author">Максим</b>
@@ -106,7 +116,7 @@
               </div>
             </li>
             <li class="gallery__item">
-              <img class="gallery__photo" src="img/photo-6-mobile.jpg" width="280px" height="180px" alt="полет">
+              <img class="gallery__photo" src="img/photo-wing-mobile@1x.jpg" width="280px" height="180px" alt="полет">
               <div class="gallery__comment comment-gallery">
                 <div class="comment-gallery__header">
                   <b class="comment-gallery__author">Надежда</b>
@@ -122,8 +132,8 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__logo logo">
-        <img class="logo__image" src="img/logotype-blue-tablet.svg" alt="Pink">
+      <div class="page-footer__logo">
+        <img src="img/logo-pink-blue-mobile.svg" alt="Pink" width="147px" height="40px">
       </div>
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -139,8 +149,10 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27px" height="34px">
+        </a>
       </div>
     </footer>
   </body>
