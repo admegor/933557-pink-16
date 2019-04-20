@@ -25,7 +25,10 @@
 }
 
 .apps__slogan {
+  .reset;
   display: none;
+  font-family: "OpenSanslight", "Arial", sans-serif;
+  font-weight: 300;
 }
 
 @media (min-width: @tablet-width) {
@@ -33,12 +36,26 @@
     display: block;
     .reset;
 
-    font-family: "OpenSanslight", "Arial", sans-serif;
-    font-weight: 400;
+
     font-size: 40px;
     line-height: 50px;
     text-align: center;
 
     color: @white;
+  }
+
+  .apps__list {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .apps__slogan {
+    font-size: 50px;
+    margin-top: 20px;
+  }
+
+  .apps__list {
+    margin-top: 70px;
   }
 }
