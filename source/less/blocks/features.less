@@ -1,8 +1,27 @@
 .feature {
   .reset;
-  background-color: @grey;
   width: 320px;
   margin: 0 auto;
+}
+.feature-wrapper {
+  position: relative;
+  background-color: @grey;
+}
+
+.feature-wrapper::before {
+  content: '';
+
+  position: absolute;
+  top: -60px;
+  left: 0;
+
+  width: 100%;
+  height: 200px;
+
+  background-color: @grey;
+  transform: skew(0deg, -4deg);
+
+  z-index: -1;
 }
 
 .feature__item {
