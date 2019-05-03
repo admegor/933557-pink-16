@@ -1,4 +1,5 @@
 .button {
+  font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 18px;
   text-align: center;
@@ -7,11 +8,11 @@
 
   display: block;
   position: relative;
-  width: 294px;
+  width: 274px;
   left: 50%;
-  margin-left: -148px;
-  padding-top: 13px;
-  padding-bottom: 17px;
+  margin-left: -140px;
+  padding-top: 14px;
+  padding-bottom: 16px;
   border-radius: 50px;
 
   &--ellipse {
@@ -19,6 +20,15 @@
 
     color: @white;
     border: 3px solid @white;
+  }
+
+  &--ellipse:hover {
+    color: @pink;
+    background-color: @white;
+  }
+
+  &--ellipse:active {
+    color: @pink-opacity;
   }
 }
 
