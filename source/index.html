@@ -14,7 +14,12 @@
           <div class="main-nav__wrapper">
               <div class="main-nav__header">
                 <a class="page-header__link">
-                  <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
+                    <picture>
+                        <source media="(min-width:960px") srcset="img/logo-pink-white-desktop.svg">
+                        <source media="(min-width:660px") srcset="img/logo-pink-white-tablet.svg">
+                          <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
+                      </picture>
+
                 </a>
                 <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
               </div>
@@ -99,6 +104,23 @@
               </picture>
         </div>
       </div>
+      </section>
+
+      <section class="effect">
+        <div class="effect__wrapper">
+          <div class="effect__timer">
+              <img src="img/icon-timer.svg" alt="Часы">
+              <p class="effect__24hours">24</p>
+          </div>
+          <div class="effect__description">
+            <h2>Эффектна 24 часа!</h2>
+            <p>Британские ученые провели исследования
+                и доказали, что положительный эффект
+                от использования приложения длится
+                целые сутки!</p>
+            <a href="#">Узнать больше об исследовании</a>
+          </div>
+        </div>
       </section>
 
       <section class="response">
