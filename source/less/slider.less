@@ -1,0 +1,28 @@
+.slider__toggle {
+  border: none;
+  padding: 0;
+  margin: 0 3px;
+  font-size: 0;
+  outline: none;
+
+  width: 12px;
+  height: 12px;
+  background: @cosmos;
+  opacity: 0.3;
+  border: 3px solid @white;
+  border-radius: 50%;
+
+  &--active {
+    width: 12px;
+    height: 12px;
+    background: @white;
+    opacity: 1;
+    border: 3px solid @cosmos;
+    border-radius: 50%;
+  }
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+  }
+}
