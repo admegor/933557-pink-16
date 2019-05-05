@@ -1,0 +1,115 @@
+.price {
+  background-color: @grey;
+  overflow: hidden;
+}
+
+.price__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price__list {
+  width: 840px;
+  border-collapse: collapse;
+  background-color: @white;
+  border: 2px solid @grey;
+
+  & tr td:first-child {
+    display: none;
+  }
+}
+
+.price__list td {
+  border: 2px solid @grey;
+  width: 280px;
+  // padding: 5px 10px;
+}
+
+.price__name {
+  .reset();
+  text-align: left;
+}
+
+.price__field {
+  position: relative;
+  padding-left: 15px;
+
+  height: 50px;
+}
+
+.price__field svg {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  }
+
+.price__tariff {
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+
+  padding: 18px 0px;
+
+  color: @white;
+  background-color: @cosmos;
+
+}
+
+.price__tariff span {
+  font-family: "OpenSanslight", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.price__tariff--hit {
+  position: relative;
+  background: url("../img/bg-hit.svg") no-repeat 0px 0px;
+  background-color: @cosmos;
+}
+
+.price__hit {
+  position: absolute;
+
+  top: 5px;
+  left: 8px;
+
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  // text-align: center;
+  transform: rotate(-45deg);
+}
+
+
+@media (min-width: @tablet-width) {
+  .price__toggles {
+    display: none;
+  }
+
+  .price__wrapper {
+    width: 940px;
+    padding: 50px 0px;
+  }
+
+  .price__list {
+    display: table;
+    margin: 0 auto;
+    left: 0;
+
+    position: relative;
+
+    & tr td:first-child {
+      display: table-cell;
+    }
+
+
+  }
+}
+
+

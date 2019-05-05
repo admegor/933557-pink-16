@@ -1,16 +1,18 @@
 .button {
+  font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 18px;
   text-align: center;
   text-decoration: none;
+  font-weight: bold;
 
   display: block;
   position: relative;
-  width: 280px;
+  width: 274px;
   left: 50%;
   margin-left: -140px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 14px;
+  padding-bottom: 16px;
   border-radius: 50px;
 
   &--ellipse {
@@ -18,5 +20,26 @@
 
     color: @white;
     border: 3px solid @white;
+  }
+
+  &--ellipse:hover {
+    color: @pink;
+    background-color: @white;
+  }
+
+  &--ellipse:active {
+    color: @pink-opacity;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button--ellipse {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--ellipse {
+    margin-top: 80px;
   }
 }

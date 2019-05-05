@@ -1,0 +1,112 @@
+.response {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 47px;
+}
+
+.response__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.response__name {
+  display: block;
+
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+
+  color: @black;
+}
+
+.response__personal-information {
+  display: none;
+}
+
+.response__answer-text {
+  display: block;
+
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+
+  color: @cosmos;
+}
+
+.response__toggles {
+  text-align: center;
+  order: 2;
+}
+
+@media (min-width: @tablet-width) {
+  .response {
+    width: 620px;
+    padding-top: 47px;
+  }
+
+  .response__users {
+    order: 1;
+  }
+
+  .response__answer-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .response__name {
+    font-size: 20px;
+  }
+
+  .response__personal-information {
+    display: block;
+
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+
+   color: @cosmos;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .response {
+    position: relative;
+    width: 940px;
+    padding-top: 180px;
+  }
+
+  .response__answer-text {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: 60px;
+      left: 430px;
+
+      width: 79px;
+      height: 63px;
+
+      background: url("/img/icon-quotes.svg") no-repeat 50% 50%;
+    }
+  }
+
+  .response__name {
+    font-size: 24px;
+  }
+
+  .response__personal-information {
+    font-size: 18px;
+  }
+
+  .response__toggles {
+    display: none;
+  }
+}
+

@@ -1,11 +1,28 @@
 .page-header {
-  background-color: @cosmos;
+  display: flex;
+  flex-direction: column;
+  // position: static;
+  // padding-bottom: 500px;
 }
 
 .page-header__link {
   display: block;
+
+  margin-top: 22px;
+  margin-left: 20px;
 }
 
 .page-header__logo {
   vertical-align: top;
+}
+
+@media (min-width: @tablet-width) {
+  // .page-header {
+  //   min-height: 110px;
+  // }
+
+  .page-header__link img {
+    width: 147px;
+    height: 40px;
+  }
 }

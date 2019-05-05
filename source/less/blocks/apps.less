@@ -12,7 +12,7 @@
   align-items: center;
 
   padding: 0 57px;
-  margin-bottom: 23px;
+  margin-bottom: 8px;
 }
 
 
@@ -22,4 +22,39 @@
 
 .apps__link {
   font-size: 0;
+}
+
+.apps__slogan {
+  .reset;
+  display: none;
+  font-family: "OpenSanslight", "Arial", sans-serif;
+  font-weight: 300;
+}
+
+@media (min-width: @tablet-width) {
+  .apps__slogan {
+    display: block;
+    .reset;
+
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+
+    color: @white;
+  }
+
+  .apps__list {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .apps__slogan {
+    font-size: 50px;
+    margin-top: 20px;
+  }
+
+  .apps__list {
+    margin-top: 70px;
+  }
 }
