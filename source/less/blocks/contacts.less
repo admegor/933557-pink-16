@@ -63,11 +63,32 @@
   }
 
   .contacts__list {
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: wrap;
   }
 
   .contacts__list li {
     margin-bottom: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    width: 940px;
+    padding-top: 75px;
+  }
+
+  .contacts__slogan {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .contacts__list {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  .contacts__list li:first-child {
+    order: 1;
   }
 }
