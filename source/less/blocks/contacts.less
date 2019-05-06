@@ -97,6 +97,25 @@
   .contacts__list li {
     margin-bottom: 52px;
   }
+
+  .contacts__map {
+    height: 375px;
+
+    background: url("../../img/bg-map-tablet@1x.jpg") no-repeat 50% 73%;
+  }
+
+  .contacts__map::after {
+    content: "";
+
+    width: 100%;
+    height: 62px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: url("../img/bg-triangle-white-footer.svg") no-repeat 50% 100%;
+  }
 }
 
 @media (min-width: @desktop-width) {
