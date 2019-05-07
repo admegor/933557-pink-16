@@ -1,9 +1,10 @@
-.form-wrapper {
+.form__wrapper {
   width: 280px;
   margin: 0 auto;
 }
 
-.form-wrapper {
+.form__slogan {
+  display: block;
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 30px;
@@ -14,4 +15,11 @@
   padding-bottom: 45px;
 
   color: @cosmos;
+}
+
+.form__name,
+.form__achievements {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }

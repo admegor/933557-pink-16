@@ -49,8 +49,39 @@
       </section>
 
       <section class="form">
-        <div class="form-wrapper">
-            <strong class="form-slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="visually-hidden">Пожалуйста, заполните форму ниже:</span></strong>
+        <div class="form__wrapper">
+            <strong class="form__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="visually-hidden">Пожалуйста, заполните форму ниже:</span></strong>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <div class="form__name">
+                <label for="last-name">Фамилия:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *">
+
+                <label for="first-name">Имя:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *">
+
+                <label for="middle-name">Отчество:</label>
+                <input type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
+              </div>
+              <div class="form__achievements">
+                <h2 class="form__achievements-header">Ваши безбашенные достижения в путешествии</h2>
+                <input type="checkbox" name="selfie" id="selfie" checked>
+                <label for="selfie">Сделал селфи с акулой</label>
+                <input type="checkbox" name="burnt" id="burnt" checked>
+                <label for="burnt">Обгорел на пляже</label>
+                <input type="checkbox" name="saw-Chuck-Noris" id="saw-Chuck-Noris">
+                <label for="saw-Chuck-Noris">Видел Чака Норриса</label>
+                <input type="checkbox" name="bought-souvenirs" id="bought-souvenirs">
+                <label for="bought-souvenirs">Накупил сувениров</label>
+                <input type="checkbox" name="kept-tower" id="kept-tower" checked>
+                <label for="kept-tower">Удержал башню</label>
+                <input type="checkbox" name="trashed-the-hotel" id="trashed-the-hotel" checked>
+                <label for="trashed-the-hotel">Разгромил отель</label>
+
+
+              </div>
+
+              <input type="submit" value="Отправить форму">
+            </form>
         </div>
       </section>
 
