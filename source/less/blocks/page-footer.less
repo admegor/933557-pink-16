@@ -20,15 +20,32 @@ footer {
 
   .page-footer__social {
     .reset();
-    display: flex;    
+    display: flex;
+    justify-content: space-evenly;
+
   }
 
-  .page-footer__social-item {
-    margin-right: 30px;
+  .page-footer__social-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 46px;
+    height: 46px;
+
+    margin-right: 17px;
+
+    border: 3px solid @cosmos-opacity10;
+    border-radius: 50%;    
+  }
+
+  .page-footer__social-item:last-child {
+    margin-right: 0px;
   }
 
   .page-footer__copyright {
     display: flex;
     align-items: center;
+    
   }
 }
