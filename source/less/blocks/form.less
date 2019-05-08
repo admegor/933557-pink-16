@@ -19,7 +19,22 @@
 
 .form__name,
 .form__achievements {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.form__achievements::before {
+  content: "";
+  position: absolute;
+  
+  width: 700%;
+  height: 100%;
+  
+  top: 0;
+  left: -300%;
+
+  background-color: @grey;
+  z-index: -1;
 }
