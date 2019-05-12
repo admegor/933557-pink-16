@@ -1,3 +1,7 @@
+fieldset {
+  border: none;
+}
+
 .form__wrapper {
   width: 280px;
   margin: 0 auto;
@@ -17,6 +21,7 @@
   color: @cosmos;
 }
 
+.form__name-header,
 .form__achievements-header,
 .form__apps-header,
 .form__text-field-header {
@@ -44,10 +49,10 @@
 .form__apps::before {
   content: "";
   position: absolute;
-  
+
   width: 700%;
   height: 100%;
-  
+
   top: 0;
   left: -300%;
 

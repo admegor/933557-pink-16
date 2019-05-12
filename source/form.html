@@ -49,29 +49,29 @@
       </section>
 
       <section class="form">
-
         <div class="form__wrapper">
             <strong class="form__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="visually-hidden">Пожалуйста, заполните форму ниже:</span></strong>
             <form action="https://echo.htmlacademy.ru" method="post">
-              <div class="form__name">
+              <fieldset class="form__name">
+                <legend class="form__name-header">Контактная информация</legend>
                 <ul class="form__name-list">
                   <li class="form__name-item">
                     <label for="last-name">Фамилия:</label>
-                    <input type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *">
+                    <input type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
                   </li>
                   <li class="form__name-item">
                     <label for="first-name">Имя:</label>
-                    <input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *">
+                    <input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *" required>
                   </li>
                   <li class="form__name-item">
                       <label for="middle-name">Отчество:</label>
                       <input type="text" id="middle-name" name="middle-name" placeholder="Ну и отчество тоже">
                   </li>
                 </ul>
-              </div>
+              </fieldset>
 
-              <div class="form__achievements">
-                <h2 class="form__achievements-header">Ваши безбашенные достижения в путешествии</h2>
+              <fieldset class="form__achievements">
+                <legend class="form__achievements-header">Ваши безбашенные достижения в путешествии</legend>
                 <ul class="form__achievements-list">
                   <li class="form__achievements-item">
                       <input type="checkbox" name="selfie" id="selfie" checked>
@@ -98,43 +98,43 @@
                       <label for="trashed-the-hotel">Разгромил отель</label>
                   </li>
                 </ul>
-              </div>
+              </fieldset>
 
-              <div class="form__contacts">
-                <ul>
+              <fieldset class="form__contacts">
+                <ul class="form__contacts-list">
                   <li>
                       <label for="lphone-number">Номер телефона</label>
-                      <input type="text" id="phone-number" name="phone-number" placeholder="Номер, пожалуйста">
+                      <input type="tel" id="phone-number" name="phone-number" placeholder="Номер, пожалуйста">
                   </li>
-                  <li>
+                  <li class="form__contacts-item">
                       <label for="email-address">адрес почты</label>
-                      <input type="text" id="email-address" name="email-address" placeholder="Введите почту *">
+                      <input type="email" id="email-address" name="email-address" placeholder="Введите почту *" required>
                   </li>
                 </ul>
-              </div>
+              </fieldset>
 
-              <div class="form__apps">
-                  <h2 class="form__apps-header">С каким приложением путешествовали?</h2>
-                  <ul class="form__apps-list">
-                    <li class="form__apps-item">
-                      <input type="radio" id="iOS" name="apps" value="iOS" checked>
-                      <label for="iOS">Pink для iOS</label>
-                    </li>
-                    <li class="form__apps-item">
-                      <input type="radio" id="android" name="apps" value="android">
-                      <label for="android">Pink на Android</label>
-                    </li>
-                    <li class="form__apps-item">
-                      <input type="radio" id="windows" name="apps" value="windows">
-                      <label for="windows">Windows Phone</label>
-                    </li>
-                  </ul>
-              </div>
+              <fieldset class="form__apps">
+                <legend class="form__apps-header">С каким приложением путешествовали?</legend>
+                <ul class="form__apps-list">
+                  <li class="form__apps-item">
+                    <input type="radio" id="iOS" name="apps" value="iOS" checked>
+                    <label for="iOS">Pink для iOS</label>
+                  </li>
+                  <li class="form__apps-item">
+                    <input type="radio" id="android" name="apps" value="android">
+                    <label for="android">Pink на Android</label>
+                  </li>
+                  <li class="form__apps-item">
+                    <input type="radio" id="windows" name="apps" value="windows">
+                    <label for="windows">Windows Phone</label>
+                  </li>
+                </ul>
+              </fieldset>
 
-              <div class="form__text-field">
-                <h2 class="form__text-field-header">Опишите свои эмоции</h2>
+              <fieldset class="form__text-field">
+                <legend class="form__text-field-header">Опишите свои эмоции</legend>
                 <input type="text" name="describe-emotions">
-              </div>
+              </fieldset>
 
               <input type="submit" value="Отправить форму">
             </form>
