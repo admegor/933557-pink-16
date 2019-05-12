@@ -43,7 +43,8 @@ fieldset {
 .form__name,
 .form__achievements,
 .form__apps,
-.form__contacts {
+.form__contacts,
+.form__text-field {
   .reset();
   position: relative;
   display: flex;
@@ -104,12 +105,14 @@ fieldset {
 }
 
 .form__name-item input::placeholder,
-.form__contacts-item input::placeholder {
-  color: @black;
+.form__contacts-item input::placeholder,
+.form__text-field-input::placeholder  {
+  color: @cosmos;
 }
 
 .form__name-item input:focus::placeholder,
-.form__contacts-item input:focus::placeholder {
+.form__contacts-item input:focus::placeholder,
+.form__text-field-input input:focus::placeholder  {
   color: transparent;
 }
 
@@ -274,4 +277,17 @@ fieldset {
   }
 }
 
+.form__text-field-header {
+  padding-top: 10px;
+  padding-bottom: 16px;
+}
+
+.form__text-field-input {
+  width: 100%;
+  resize: none;
+}
+
+.form__text-field-input::placeholder {
+  color: @black;
+}
 
