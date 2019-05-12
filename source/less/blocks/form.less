@@ -25,6 +25,10 @@ fieldset {
   color: @cosmos;
 }
 
+.form__slogan--hidden {
+  display: none;
+}
+
 .form__name-header,
 .form__achievements-header,
 .form__apps-header,
@@ -293,4 +297,35 @@ fieldset {
 
 .form__text-field-input::placeholder {
   line-height: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    width: 620px;
+  }
+
+  .form__slogan {
+    font-size: 18px;
+
+    padding-top: 92px;
+  }
+  .form__slogan--hidden {
+    display: block;
+  }
+
+  .form__name-item {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 37px;
+  }
+
+  .form__name-item input {
+    width: 100%;
+  }
+
+  .form__name-item label {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
 }
