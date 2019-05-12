@@ -101,7 +101,7 @@ fieldset {
 .form__name-item input {
   height: 60px;
   padding-left: 20px;
-  border: solid 2px #e5e5e5;
+  border: solid 2px @light-grey;
 }
 
 .form__name-item input::placeholder,
@@ -112,7 +112,7 @@ fieldset {
 
 .form__name-item input:focus::placeholder,
 .form__contacts-item input:focus::placeholder,
-.form__text-field-input input:focus::placeholder  {
+.form__text-field-input input:focus::placeholder {
   color: transparent;
 }
 
@@ -283,11 +283,14 @@ fieldset {
 }
 
 .form__text-field-input {
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 14px;
   width: 100%;
   resize: none;
+  border: solid 2px @light-grey;
 }
 
 .form__text-field-input::placeholder {
-  color: @black;
+  line-height: 30px;
 }
-
