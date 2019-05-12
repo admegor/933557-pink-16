@@ -42,7 +42,8 @@ fieldset {
 
 .form__name,
 .form__achievements,
-.form__apps {
+.form__apps,
+.form__contacts {
   .reset();
   position: relative;
   display: flex;
@@ -121,8 +122,12 @@ fieldset {
   margin-bottom: 35px;
 }
 
+.form__achievements-item:last-child {
+  padding-bottom: 13px;
+
+}
+
 .form__achievements-item input {
-  // position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -130,8 +135,6 @@ fieldset {
 
 .form__achievements-item label {
   padding-left: 65px;
-  // text-align: center;
-  // padding-top: 15px;
 }
 
 .form__check {
@@ -189,4 +192,27 @@ fieldset {
   height: 2px;
 
   color: @pink;
+}
+
+.form__contacts-item {
+  margin-bottom: 15px;
+}
+
+.form__contacts-item label {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  margin-left: 6px;
+  // margin-bottom: 25px;
+
+  color: @pink;
+}
+
+.form__contacts-item input {
+  height: 60px;
+  width: 260px;
+  padding-left: 20px;
+  border: solid 2px #e5e5e5;
 }
