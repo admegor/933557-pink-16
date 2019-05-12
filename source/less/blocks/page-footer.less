@@ -1,5 +1,88 @@
-footer {
+.page-footer {
   display: none;
+}
+
+.page-footer__page-form {
+  display: block;
+}
+
+.page-footer__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  height: 210px;
+  margin-top: 55px;
+  margin-bottom: 20px;
+}
+
+.page-footer__social {
+  .reset();
+  display: flex;
+  justify-content: center;
+}
+
+.page-footer__social-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 46px;
+  height: 46px;
+
+  margin-right: 10px;
+
+  border: 3px solid @cosmos-opacity10;
+  border-radius: 50%;
+
+  &:hover {
+    border: 3px solid @cosmos;
+  }
+
+  &:active {
+    opacity: 0.3;
+    border: 3px solid @cosmos-opacity10;
+  }
+}
+
+.page-footer__social-item:first-child {
+  margin-left: 15px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__developed-by {
+  .reset();
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: @cosmos;
+  text-align-last: left;
+}
+
+.page-footer__developed-by-link {
+  width: 27px;
+  height: 34px;
+
+  margin-left: 15px;
+  margin-top: 8px;
+
+  fill: @cosmos;
+
+  &:hover path {
+    fill: @cosmos;
+  }
+
+  &:active path {
+    fill: @cosmos-opacity30;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -9,78 +92,10 @@ footer {
 
   .page-footer__wrapper {
     width: 660px;
-    margin: 0 auto;
+
     padding-top: 36px;
     padding-bottom: 51px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .page-footer__social {
-    .reset();
-    display: flex;
-    justify-content: center;
-  }
-
-  .page-footer__social-item a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 46px;
-    height: 46px;
-
-    margin-right: 17px;
-
-    border: 3px solid @cosmos-opacity10;
-    border-radius: 50%;
-
-    &:hover {
-      border: 3px solid @cosmos;
-    }
-
-    &:active {
-      opacity: 0.3;
-      border: 3px solid @cosmos-opacity10;
-    }
-  }
-
-  .page-footer__social-item:last-child {
-    margin-right: 0px;
-  }
-
-  .page-footer__copyright {
-    display: flex;
-    align-items: center;
-  }
-
-  .page-footer__developed-by {
-    .reset();
-    font-family: "OpenSans", "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    color: @cosmos;
-    text-align-last: left;
-  }
-
-  .page-footer__developed-by-link {
-    width: 27px;
-    height: 34px;
-
-    margin-left: 15px;
-    margin-top: 8px;
-
-    fill: @cosmos;
-
-    &:hover path {
-      fill: @cosmos;
-    }
-
-    &:active path {
-      fill: @cosmos-opacity30;
-    }
+    flex-direction: row;
   }
 }
 
