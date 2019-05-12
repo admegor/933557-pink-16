@@ -16,7 +16,7 @@ fieldset {
   text-align: center;
 
   padding-top: 45px;
-  padding-bottom: 45px;
+  margin-bottom: 34px;
 
   color: @cosmos;
 }
@@ -39,10 +39,13 @@ fieldset {
 .form__name,
 .form__achievements,
 .form__apps {
+  .reset();
   position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
+  margin-bottom: 25px;
 }
 
 .form__achievements::before,
@@ -58,4 +61,52 @@ fieldset {
 
   background-color: @grey;
   z-index: -1;
+}
+
+.form__name-list,
+.form__achievements-list,
+.form__contacts-list,
+.form__apps-list {
+  .reset();
+}
+
+.form__name-header {
+  display: none;
+}
+
+.form__name-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form__name-item label {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  margin-left: 21px;
+  margin-bottom: 9px;
+
+  color: @pink;
+}
+
+.form__name-item input {
+  height: 50px;
+  padding-left: 20px;
+  border: solid 2px #e5e5e5;
+}
+
+.form__name-item input::placeholder {
+  color: @black;
+}
+
+.form__name-item input:focus::placeholder {
+  color: transparent;
+}
+
+.form__achievements-header {
+  padding-top: 38px;
+  padding-bottom: 30px;
 }
