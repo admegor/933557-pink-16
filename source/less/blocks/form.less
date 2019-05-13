@@ -32,7 +32,8 @@
 .form__name-header,
 .form__achievements-header,
 .form__apps-header,
-.form__text-field-header {
+.form__text-field-header,
+.form__contacts-header {
   .reset();
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 14px;
@@ -192,6 +193,10 @@
 
     background-color: @pink;
   }
+}
+
+.form__contacts-header {
+  display: none;
 }
 
 .form__contacts-list {
@@ -355,6 +360,7 @@
 
   .form__apps {
     order: 2;
+    margin-bottom: 60px;
 
     border: 2px solid @light-grey;
 
@@ -367,6 +373,7 @@
   .form__apps-list {
     margin-left: 60px;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .form__apps-item label {
@@ -377,14 +384,84 @@
     margin-left: -60px;
   }
 
+  .form__contacts {
+    order: 3;
+
+    border: 2px solid @light-grey;
+  }
+
+  .form__contacts-header {
+    display: block;
+    text-align: center;
+    padding: 0 30px;
+    margin-bottom: 25px;
+  }
+
+  .form__contacts-list {
+    margin-bottom: 10px;
+  }
+
+  .form__contacts-item {
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding-bottom: 24px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      width: 60px;
+      height: 60px;
+
+      top: 6px;
+      right: 60px;
+
+      background-color: @light-grey;
+    }
+  }
+
+  .form__contacts-item input {
+    box-sizing: border-box;
+    align-self: center;
+
+    width: 500px;
+    height: 64px;
+    padding-right: 80px;
+  }
+
+  .form__contacts-item input[type="tel"] {
+    background: url("../img/icon-phone.svg") no-repeat 457px 50%;
+    z-index: 1;
+  }
+
+  .form__contacts-item input[type="email"] {
+    background: url("../img/icon-mail.svg") no-repeat 457px 50%;
+    z-index: 1;
+  }
+
+  .form__contacts-item label {
+    margin-top: 10px;
+    margin-left: 78px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
   .form__achievements {
-    order: 3;
-  }
-
-  .form__contacts {
     order: 4;
   }
 
