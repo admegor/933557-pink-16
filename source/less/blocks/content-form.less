@@ -1,4 +1,6 @@
 .content-form {
+  min-height: 240px;
+
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
   background-size: cover;
 }
@@ -19,11 +21,15 @@
 
   color: @white;
 
-  padding-top: 94px;
-  padding-bottom: 54px;
+  padding-top: 100px;
 }
 
 @media (min-width: @tablet-width) {
+  .content-form {
+    min-height: 440px;
+    padding-top: 100px;
+  }
+
   .content-form__wrapper {
     width: 620px;
   }
@@ -34,7 +40,7 @@
   }
 
   .content-form__header {
-    padding-top: 130px;
-    padding-bottom: 83px;
+    // padding-top: 130px;
+    // padding-bottom: 83px;
   }
 }
