@@ -380,7 +380,6 @@
 
     &::before {
       display: none;
-
     }
   }
 
@@ -400,6 +399,7 @@
 
   .form__contacts {
     order: 3;
+    margin-bottom: 60px;
 
     border: 2px solid @light-grey;
   }
@@ -461,23 +461,43 @@
     margin-left: 78px;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .form__achievements {
     order: 4;
+
+    border: 2px solid @light-grey;
+    
+    &::before {
+      display: none;
+    }    
   }
+
+  .form__achievements-header {
+    padding: 0 20px;    
+  }
+
+  .form__achievements-header br {
+    display: none;
+  }
+
+  .form__achievements-list {
+    margin-top: 47px;
+    margin-left: 42px;
+  }
+  
+  .form__check {
+    margin-left: -60px;
+  }
+
+
+
+
+
+
+
+
+
+
+
 
   .form__text-field {
     order: 5;
