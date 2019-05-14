@@ -140,7 +140,6 @@
 
 .form__achievements-item:last-child {
   padding-bottom: 13px;
-
 }
 
 .form__input {
@@ -317,6 +316,10 @@
 
 .form__text-field-input::placeholder {
   line-height: 30px;
+}
+
+.form__required-hidden {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -621,11 +624,36 @@
 
   .form__achievements-list {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
     flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
     height: 165px;
     margin-left: 50px;
+  }
+
+  .form__achievements-item:last-child {
+    padding-bottom: 20px;
+  }
+
+  .form__text-field {
+    width: 100%;
+  }
+
+  .form__text-field-input {
+    width: 820px;
+    height: 128px;
+    margin-top: 35px;
+  }
+
+  .form__required-hidden {
+    display: inline-block;
+  }
+
+  .form-btn {
+    margin-top: 10px;
+  }
+
+  .form__required-field {
+    margin-top: 27px;
   }
 }
