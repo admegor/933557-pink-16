@@ -117,7 +117,7 @@
 
 .form__name-item input::placeholder,
 .form__contacts-item input::placeholder,
-.form__text-field-input::placeholder  {
+.form__text-field-input::placeholder {
   color: @cosmos;
 }
 
@@ -143,8 +143,8 @@
 }
 
 .form__input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
   appearance: none;
 }
 
@@ -212,7 +212,7 @@
 }
 
 .form__contacts-item:last-child {
-  padding-bottom: 15px
+  padding-bottom: 15px;
 }
 
 .form__contacts-item label {
@@ -250,8 +250,6 @@
 }
 
 .form__radio-btn {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -345,10 +343,6 @@
     display: block;
   }
 
-  .form__name {
-    margin-bottom: 40px;
-  }
-
   .form__name-item {
     flex-direction: row;
     align-items: center;
@@ -366,11 +360,10 @@
 
   .form__name {
     order: 1;
+    margin-bottom: 40px;
   }
 
   .form__apps-header {
-    padding-top: 0px;
-    padding-bottom: 0px;
     margin-bottom: 40px;
     padding: 0 20px;
   }
@@ -520,7 +513,7 @@
   }
 }
 
-@media (min-width: @desktop-width)  {
+@media (min-width: @desktop-width) {
   .content-form {
     min-height: 394px;
   }
@@ -588,15 +581,15 @@
   }
 
   .form__contacts-item:last-child {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   .form__contacts-item {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   .form__contacts-item::after {
-    right: 0px;
+    right: 0;
   }
 
   .form__contacts-item input[type="tel"] {
