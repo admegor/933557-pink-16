@@ -1,0 +1,44 @@
+.content-form {
+  min-height: 240px;
+
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
+  background-size: cover;
+}
+
+.content-form__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.content-form__header {
+  .reset();
+
+  font-family: "OpenSanslight", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  text-align: center;
+
+  color: @white;
+
+  padding-top: 100px;
+}
+
+@media (min-width: @tablet-width) {
+  .content-form {
+    min-height: 440px;
+  }
+
+  .content-form__wrapper {
+    width: 620px;
+  }
+
+  .content-form__header {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .content-form__header {
+    padding-top: 180px;
+  }
+}

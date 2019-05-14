@@ -1,0 +1,518 @@
+.page-form {
+  overflow: hidden;
+}
+
+.form__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.form__slogan {
+  display: block;
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+
+  padding-top: 45px;
+  margin-bottom: 34px;
+
+  color: @cosmos;
+
+  & br {
+    display: none;
+  }
+}
+
+.form__slogan--hidden {
+  display: none;
+}
+
+.form__name-header,
+.form__achievements-header,
+.form__apps-header,
+.form__text-field-header,
+.form__contacts-header {
+  .reset();
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: @pink;
+}
+
+.form__name,
+.form__achievements,
+.form__apps,
+.form__contacts,
+.form__text-field {
+  .reset();
+  border: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin-bottom: 28px;
+}
+
+.form__achievements::before,
+.form__apps::before {
+  content: "";
+  position: absolute;
+
+  width: 700%;
+  height: 100%;
+
+  top: 0;
+  left: -300%;
+
+  background-color: @grey;
+  z-index: -1;
+}
+
+.form__name-list,
+.form__achievements-list,
+.form__contacts-list,
+.form__apps-list {
+  .reset();
+}
+
+.form__name-header {
+  display: none;
+}
+
+.form__name-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 13px;
+}
+
+.form__name-item label {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  margin-left: 23px;
+  margin-bottom: 5px;
+
+  color: @pink;
+}
+
+.form__name-item input {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;  
+  height: 60px;
+  padding-left: 20px;
+
+  color: @cosmos;
+  border: solid 2px @light-grey;
+}
+
+.form__name-item input::placeholder,
+.form__contacts-item input::placeholder,
+.form__text-field-input::placeholder  {
+  color: @cosmos;
+}
+
+.form__name-item input:focus::placeholder,
+.form__contacts-item input:focus::placeholder,
+.form__text-field-input:focus::placeholder {
+  color: transparent;
+}
+
+.form__achievements-header {
+  padding-top: 38px;
+  padding-bottom: 45px;
+}
+
+.form__achievements-item {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 35px;
+}
+
+.form__achievements-item:last-child {
+  padding-bottom: 13px;
+
+}
+
+.form__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form__achievements-item label {
+  padding-left: 65px;
+}
+
+.form__check {
+  position: absolute;
+
+  width: 35px;
+  height: 35px;
+
+
+  margin-left: -70px;
+  margin-top: -5px;
+
+  background-color: @white;
+  border: 2px solid @light-grey;
+}
+
+.form__input:checked + label .form__check {
+  width: 35px;
+  height: 35px;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+
+    top: 19px;
+    left: 7px;
+    transform: rotate(45deg);
+
+    background-color: @pink;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 20px;
+    height: 2px;
+
+    top: 15px;
+    left: 12px;
+    transform: rotate(135deg);
+
+    background-color: @pink;
+  }
+}
+
+.form__contacts-header {
+  display: none;
+}
+
+.form__contacts-list {
+  padding-top: 5px;
+}
+
+.form__contacts-item {
+  padding-bottom: 19px;
+}
+
+.form__contacts-item:last-child {
+  padding-bottom: 15px
+}
+
+.form__contacts-item label {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  margin-left: 22px;
+
+  color: @pink;
+}
+
+.form__contacts-item input {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px; 
+  height: 56px;
+  width: 256px;
+
+  padding-left: 20px;
+  margin-top: 4px;
+
+  color: @cosmos;
+  border: solid 2px #e5e5e5;
+}
+
+.form__apps-header {
+  padding-top: 38px;
+  padding-bottom: 42px;
+}
+
+.form__apps-item {
+  padding-bottom: 48px;
+}
+
+.form__radio-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form__apps-item label {
+  padding-left: 65px;
+}
+
+.form__radio {
+  position: absolute;
+
+  width: 35px;
+  height: 35px;
+
+
+  margin-left: -70px;
+  margin-top: -5px;
+
+  background-color: @white;
+  border: 2px solid @light-grey;
+  border-radius: 50%;
+}
+
+.form__radio-btn:checked + label .form__radio {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    top: 10px;
+    left: 10px;
+
+    border-radius: 50%;
+    background-color: @pink;
+  }
+}
+
+.form__text-field-header {
+  padding-top: 10px;
+  padding-bottom: 16px;
+}
+
+.form__text-field-input {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px; 
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 14px;
+  width: 100%;
+  resize: none;
+
+  color: @cosmos;
+  border: solid 2px @light-grey;
+}
+
+.form__text-field-input::placeholder {
+  line-height: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    width: 620px;
+  }
+
+  .form__flex-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__slogan {
+    font-size: 18px;
+    padding-top: 92px;
+
+    & br {
+      display: inline-block;
+    }
+  }
+
+  .form__slogan--hidden {
+    display: block;
+  }
+
+  .form__name {
+    margin-bottom: 40px;
+  }
+
+  .form__name-item {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 37px;
+  }
+
+  .form__name-item input {
+    width: 100%;
+  }
+
+  .form__name-item label {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  .form__name {
+    order: 1;
+  }
+
+  .form__apps-header {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .form__apps {
+    order: 2;
+    margin-bottom: 60px;
+
+    border: 2px solid @light-grey;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .form__apps-list {
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form__apps-item label {
+    padding-left: 45px;
+  }
+
+  .form__radio {
+    margin-left: -60px;
+  }
+
+  .form__contacts {
+    order: 3;
+    margin-bottom: 60px;
+
+    border: 2px solid @light-grey;
+  }
+
+  .form__contacts-header {
+    display: block;
+    text-align: center;
+    padding: 0 30px;
+    margin-bottom: 25px;
+  }
+
+  .form__contacts-list {
+    margin-bottom: 10px;
+  }
+
+  .form__contacts-item {
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding-bottom: 24px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      width: 60px;
+      height: 60px;
+
+      top: 6px;
+      right: 60px;
+
+      background-color: @light-grey;
+    }    
+  }
+
+  .form__contacts-item input {
+    box-sizing: border-box;
+    align-self: center;
+
+    width: 500px;
+    height: 64px;
+    padding-right: 80px;
+  }
+
+  .form__contacts-item input[type="tel"] {
+    background: url("../img/icon-phone.svg") no-repeat 457px 50%;
+    z-index: 1;
+  }
+
+  .form__contacts-item input[type="email"] {
+    background: url("../img/icon-mail.svg") no-repeat 457px 50%;
+    z-index: 1;
+  }
+
+  .form__contacts-item label {
+    margin-top: 10px;
+    margin-left: 78px;
+  }
+
+  .form__achievements {
+    order: 4;
+    margin-bottom: 63px;
+
+    border: 2px solid @light-grey;
+    
+    &::before {
+      display: none;
+    }    
+  }
+
+  .form__achievements-header {
+    padding: 0 20px;    
+  }
+
+  .form__achievements-header br {
+    display: none;
+  }
+
+  .form__achievements-list {
+    margin-top: 47px;
+    margin-left: 42px;
+  }
+
+  .form__check {
+    margin-left: -60px;
+  }
+
+  .form__text-field {
+    order: 5;
+    margin-bottom: 58px;
+
+    border: 2px solid @light-grey;
+  }
+
+  .form__text-field-header {
+    padding: 0 20px;    
+  }
+
+  .form__text-field-input {
+    box-sizing: border-box;
+    margin: 40px 60px;
+    width: 500px;
+    height: 195px;
+  }
+
+  .form__submit-wrapper {
+    display: flex;
+    justify-content: space-between;    
+  }
+
+  .form-btn {
+    margin-top: 17px;
+  }
+}

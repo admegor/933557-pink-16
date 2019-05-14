@@ -1,13 +1,14 @@
 .main-nav__header {
   display: flex;
   justify-content: space-between;
-  min-height: 70px;
+  min-height: 66px;
 
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .main-nav {
   position: relative;
+  margin-bottom: -70px;
 }
 
 .main-nav__toggle {
@@ -44,15 +45,15 @@
   &::before,
   &::after {
     content: "";
-
     position: absolute;
-    top: 10px;
-    right: 8px;
 
-    width: 36px;
+    top: 12px;
+    right: 6px;
+
+    width: 30px;
     height: 5px;
 
-    background-color: #ffffff;
+    background-color: @white;
   }
 
   &::before {
@@ -116,6 +117,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav {
+    margin-bottom: -110px;
+  }
+
   .main-nav__toggle {
     top: 36px;
   }
