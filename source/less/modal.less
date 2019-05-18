@@ -1,0 +1,47 @@
+.modal {
+  position: fixed;
+  background-color: @white;
+
+  display: none;
+  z-index: 1;
+}
+
+.modal-show {
+  display: block;
+  // top: 50%;
+}
+
+.modal__error,
+.modal__success {
+  top: 10%;
+  left: 50%;
+
+  width: 320px;
+  margin-left: -160px;
+  padding-bottom: 30px;
+}
+
+.modal__header {
+  display: block;
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+
+  margin-top: 46px;
+  margin-bottom: 36px;
+
+  color: @black;
+}
+
+.modal__message {
+  .reset();
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+

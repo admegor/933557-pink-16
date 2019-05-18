@@ -2,58 +2,76 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>HTML Academy: Пинк</title>
+    <title>HTML Academy: Пинк ✪ Фотографии</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+
     <header class="page-header">
-      <nav class="main-nav">
-        <div class="main-nav__header">
-          <a class="page-header__link" href="index.html">
-            <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
-          </a>
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        </div>
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item  site-list__item--active">
-              <a>Фотографии</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Конкурс</a>
-            </li>
-            <li class="site-list__item">
-              <a href="htmlacademy.html">HTML Academy</a>
-            </li>
-          </ul>
-      </nav>
-    </header>
-    <main class="page-photo">
-      <div class="page-photo__wrapper">
-        <h1 class="page-photo__header">Фотографии<br> пользователей</h1>
-      </div>
-      <section class="gallery">
-        <div class="gallery__intro-wrapper">
-            <b class="gallery__intro">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</b>
-        </div>
-        <div class="gallery__wrapper">
-          <div class="gallery__popular">
-            <img class="gallery__photo-popular" src="img/panorama-mobile@1x.jpg" width="320px" height="137px" alt="фото панорамы дня">
-            <div class="gallery__comment comment-gallery">
-              <div class="comment-gallery__header">
-                <b class="comment-gallery__author">Анна</b>
-                <span class="comment-gallery__time-ago">(5 минут назад)</span>
-              </div>
-              <p class="comment-gallery__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <button class="comment-gallery__like" type="button" name="like"></button>
-              <span class="comment-gallery__like-count">Нравится:215</span>
+        <nav class="main-nav main-nav--closed">
+          <div class="main-nav__wrapper">
+            <div class="main-nav__header">
+              <a class="page-header__link">
+                <picture>
+                  <source media="(min-width:960px") srcset="img/logo-pink-white-desktop.svg">
+                  <source media="(min-width:660px") srcset="img/logo-pink-white-tablet.svg">
+                  <img class="page-header__logo" src="img/logo-pink-white-mobile.svg" alt="Пинк">
+                </picture>
+              </a>
+              <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             </div>
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item site-list__item--active">
+                <a href="photo.html">Фотографии</a>
+              </li>
+              <li class="site-list__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="site-list__item">
+                <a href="htmlacademy.html">HTML Academy</a>
+              </li>
+            </ul>
           </div>
+        </nav>
+      </header>
+
+    <main class="page-photo">
+
+      <section class="content-form">
+        <div class="content-form__wrapper">
+          <h1 class="content-form__header">Фотографии<br> пользователей</h1>
+        </div>
+      </section>
+
+      <section class="slogan">
+        <b class="slogan__intro">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</b>
+      </section>
+
+      <section class="panorama">
+        <div class="panorama__wrapper">
+          <div class="gallery__popular">
+              <img class="gallery__photo-popular" src="img/panorama-mobile@1x.jpg" width="320px" height="137px" alt="фото панорамы дня">
+              <div class="gallery__comment comment-gallery">
+                <div class="comment-gallery__header">
+                  <b class="comment-gallery__author">Анна</b>
+                  <span class="comment-gallery__time-ago">(5 минут назад)</span>
+                </div>
+                <p class="comment-gallery__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <button class="comment-gallery__like" type="button" name="like"></button>
+                <span class="comment-gallery__like-count">Нравится:215</span>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="gallery__wrapper">
           <ul class="gallery__list">
             <li class="gallery__item">
               <img class="gallery__photo" src="img/photo-car-mobile@1x.jpg" width="280px" height="180px" alt="съемка авто">
@@ -155,5 +173,21 @@
         </a>
       </div>
     </footer>
+
+    <script>
+        var navMain = document.querySelector('.main-nav');
+        var navToggle = document.querySelector('.main-nav__toggle');
+
+        navToggle.addEventListener('click', function() {
+          if (navMain.classList.contains('main-nav--closed')) {
+            navMain.classList.remove('main-nav--closed');
+            navMain.classList.add('main-nav--opened');
+          } else {
+            navMain.classList.add('main-nav--closed');
+            navMain.classList.remove('main-nav--opened');
+          }
+        });
+      </script>
+
   </body>
 </html>
