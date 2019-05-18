@@ -18,35 +18,135 @@
 
 .filter__list {
   .reset();
-  padding: 0 15px;
+  padding: 0 17px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 50px;
+
+  border-bottom: 1px solid @grey;
+}
+
+.filter__item:last-child {
+  padding-right: 2px;
+}
+
+.filter__item:hover {
+  opacity: 0.5;
 }
 
 .filter__item {
+  position: relative;
   width: 48px;
-  padding-bottom: 90px;
+  fill: @cosmos;
+  opacity: 0.3;
 
-  &--active path {
+  &--active {
 
     fill: @pink;
     opacity: 1;
   }
+
+  &--active:hover {
+    opacity: 1;
+  }
 }
+
+
 
 .filter__range {
   display: none;
 
   &--active {
     position: absolute;
+    top: 84px;
     left: 50%;
-    margin-left: -120px;
+    margin-left: -38px;
     display: block;
     width: 240px;
+    z-index: 1;
   }
 
   &--active path {
     fill: #ffffff;
   }
 }
+
+input[type=range] {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 2px;
+  cursor: pointer;
+  background: @cosmos;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  height: 15px;
+  width: 15px;
+  margin-top: -6px;
+
+  border: 2px solid @pink;
+  border-radius: 50%;
+  background: @white;
+  cursor: pointer;
+  &:active,
+  &:focus {
+    background: @pink;
+  }
+}
+
+input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+
+  height: 15px;
+  width: 15px;
+  margin-top: -6px;
+
+  border: 2px solid @pink;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+  -ms-progress-appearance: none;
+
+  height: 15px;
+  width: 15px;
+  margin-top: -6px;
+
+  border: 2px solid @pink;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+
