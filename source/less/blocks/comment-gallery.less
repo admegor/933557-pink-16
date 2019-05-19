@@ -1,16 +1,15 @@
 .comment-gallery {
-  margin: auto 20px;
   color: @cosmos;
   background-color: @grey;
   margin-bottom: 20px;
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-bottom: 20px;
+  // padding-left: 17px;
+  // padding-right: 17px;
+  // padding-bottom: 20px;
 }
 
-.comment-gallery__header {
-  padding-top: 15px;
-}
+// .comment-gallery__header {
+//   padding-top: 15px;
+// }
 
 .comment-gallery__author {
   font-family: "OpenSansBold", "Arial", sans-serif;
@@ -37,7 +36,9 @@
   line-height: 24px;
   font-weight: 300;
 
-  margin-bottom: 5px;
+  flex-grow: 1;
+
+  // margin-bottom: 5px;
 }
 
 .comment-gallery__like {
@@ -47,6 +48,10 @@
   height: 12px;
 
   margin-right: 15px;
+}
+
+.comment-gallery__like-wrapper {
+  margin-bottom: 23px;
 }
 
 .comment-gallery__like-count {
@@ -62,34 +67,61 @@
 @media (min-width: @tablet-width) {
   .comment-gallery {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 27px;
+    flex-direction: column;
   }
 
   .comment-gallery__header {
-    order: 1;
+    // padding-top: 21px;
 
-    padding-top: 20px;
+    &--panorama {
+      order: 1;
+
+      padding-top: 20px;
+    }
   }
 
   .comment-gallery__like-wrapper {
-    order: 2;
+    display: inline-block;
 
-    margin-top: 26px;
+    &--panorama {
+      order: 2;
+
+      margin-top: 26px;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 124px;
+    }
+  }
+
+  .comment-gallery__like-wrapper {
     display: flex;
-    align-items: center;
     flex-direction: row-reverse;
+    align-items: center;
     justify-content: space-between;
-    width: 124px;
   }
 
   .comment-gallery__like {
     margin-right: 0;
   }
 
-  .comment-gallery__content {
+  .comment-gallery__content--panorama {
     order: 3;
+  }
+
+  .comment-gallery {
+    height: 135px;
+    // width: auto;
+
+    &--panorama {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 27px;
+      margin-bottom: 68px;
+      height: auto;
+    }
   }
 }
