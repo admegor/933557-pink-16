@@ -58,3 +58,38 @@
 
   color: @pink;
 }
+
+@media (min-width: @tablet-width) {
+  .comment-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 27px;
+  }
+
+  .comment-gallery__header {
+    order: 1;
+
+    padding-top: 20px;
+  }
+
+  .comment-gallery__like-wrapper {
+    order: 2;
+
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 124px;
+  }
+
+  .comment-gallery__like {
+    margin-right: 0;
+  }
+
+  .comment-gallery__content {
+    order: 3;
+  }
+}

@@ -25,3 +25,35 @@
   margin: auto 20px;
   vertical-align: top;
 }
+
+.gallery__popular::before {
+  content: "Панорама дня";
+  position: absolute;
+
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 6px;
+
+
+  width: 140px;
+  height: 30px;
+
+  top: 0;
+  right: 20px;
+
+  background-color: @pink;
+  color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__photo-popular {
+    height: 509px;
+  }
+
+  .gallery__popular::before {
+    top: 57px;
+  }
+}
