@@ -49,11 +49,24 @@
 }
 
 @media (min-width: @tablet-width) {
+  .gallery__wrapper {
+    width: 660px;
+  }
+
   .gallery__photo-popular {
     height: 509px;
   }
 
   .gallery__popular::before {
     top: 57px;
+  }
+
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery__item {
+    width: 300px;
   }
 }
