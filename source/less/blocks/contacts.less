@@ -5,7 +5,7 @@
 .contacts__wrapper {
   width: 280px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 42px;
 }
 
 .contacts__slogan {
@@ -25,27 +25,41 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-top: 44px;
+  margin-top: 30px;
 }
 
-.contacts__list b {
-  font-family: "OpenSansBold", "Arial", sans-serif;
-  font-size: 18px;
-  text-align: center;
-  color: @cosmos;
-}
-
-.contacts__list p {
+.contacts__list a,
+.contacts__list address {
   .reset();
   font-family: "OpenSanslight", "Arial", sans-serif;
   font-size: 24px;
   text-align: center;
+  text-decoration: none;
+  font-style: normal;
 
   color: @pink;
 }
 
-.contacts__list li {
+.contacts__list a:hover {
+  color: @cosmos;
+  text-decoration: underline;
+}
+
+.contacts__list a:active {
+  opacity: 0.3;
+}
+
+.contacts__item {
   margin-bottom: 20px;
+}
+
+.contacts__header {
+  .reset();
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 18px;
+  text-align: center;
+
+  color: @cosmos;
 }
 
 .contacts__map {

@@ -24,7 +24,7 @@
 }
 
 .feature__list {
-  padding-top: 100px;
+  padding-top: 90px;
 }
 
 .feature__item {
@@ -32,18 +32,26 @@
   text-align: center;
   margin: 0 auto;
   width: 280px;
+  margin-bottom: 30px;
+}
+
+.feature__list .feature__item:last-child {
+  margin-bottom: 40px;
 }
 
 .feature__header {
+  .reset();
   font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  margin-bottom: 13px;
 
   color: @black;
 }
 
 .feature__description {
+  .reset();
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -54,6 +62,10 @@
 .feature__image {
   display: block;
   margin: auto;
+}
+
+.feature__display {
+  height: 277px;
 }
 
 @media (min-width: @tablet-width) {
