@@ -82,10 +82,30 @@
     padding-top: 21px;
     padding-left: 27px;
     padding-right: 32px;
-    // margin-bottom: 20px;
   }
 
   .gallery__photo {
     width: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__popular {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .gallery__popular::before {
+    top: 54px;
+    right: 130px;
+  }
+
+  .gallery__photo--popular {
+    height: auto;
+  }
+
+  .gallery__wrapper {
+
   }
 }
