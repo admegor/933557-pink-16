@@ -234,3 +234,43 @@ input[type="range"]::-ms-fill-upper {
     opacity: 1;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .filter__wrapper {
+    width: 940px;
+  }
+
+  .filter__wrapper img {
+    margin-left: 80px;
+  }
+
+  .filter__list {
+    margin-left: 68px;
+    margin-top: 55px;
+    margin-bottom: 135px;
+  }
+
+  .filter__item svg {
+    width: 55px;
+    height: 45px;
+  }
+
+  .filter__item:last-child svg {
+    height: 40px;
+  }
+
+  .filter__item {
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+    width: 410px;
+
+    border-bottom: 1px solid @cosmos-opacity10;
+  }
+
+  .filter__item input {
+    position: absolute;
+    top: 22px;
+    left: 97px;
+    width: 288px;
+  }
+}
