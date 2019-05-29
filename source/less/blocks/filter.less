@@ -71,22 +71,22 @@
   }
 }
 
-input[type=range] {
-  -webkit-appearance: none;
+input[type="range"] {
+  appearance: none;
 }
 
-input[type=range]:focus {
+input[type="range"]:focus {
   // outline: none;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   height: 2px;
   cursor: pointer;
   background: @cosmos;
 }
 
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
 
   height: 15px;
   width: 15px;
@@ -96,20 +96,21 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 50%;
   background: @white;
   cursor: pointer;
+
   &:active,
   &:hover {
     background: @pink;
   }
 }
 
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   height: 2px;
   cursor: pointer;
   background: @cosmos;
 }
 
-input[type=range]::-moz-range-thumb {
-  -moz-appearance: none;
+input[type="range"]::-moz-range-thumb {
+  appearance: none;
 
   height: 15px;
   width: 15px;
@@ -119,13 +120,14 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50%;
   background: @white;
   cursor: pointer;
+
   &:active,
   &:focus {
     background: @pink;
   }
 }
 
-input[type=range]::-ms-thumb {
+input[type="range"]::-ms-thumb {
   -ms-progress-appearance: none;
 
   height: 15px;
@@ -136,13 +138,14 @@ input[type=range]::-ms-thumb {
   border-radius: 50%;
   background: @white;
   cursor: pointer;
+
   &:active,
   &:focus {
     background: @pink;
   }
 }
 
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
   height: 2px;
   cursor: pointer;
   background: @cosmos;
@@ -226,7 +229,7 @@ input[type="range"]::-ms-fill-upper {
     fill: @pink;
   }
 
-  .filter__item:hover input[type=range]::-webkit-slider-thumb {
+  .filter__item:hover input[type="range"]::-webkit-slider-thumb {
     background: @pink;
   }
 
