@@ -7,14 +7,14 @@
 .price__wrapper {
   width: 280px;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 113px;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.price__wrapper::after {
+.price__wrapper::before {
   content: "";
 
   position: absolute;
@@ -45,14 +45,18 @@
 
 .price__name {
   .reset();
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
   text-align: left;
+  margin-left: 8px;
 }
 
 .price__field {
   position: relative;
   padding-left: 15px;
 
-  height: 50px;
+  height: 56px;
 }
 
 .price__field svg {
@@ -107,8 +111,8 @@
 
   .price__wrapper {
     width: 620px;
-    padding: 50px 0;
-    padding-top: 90px;
+    padding: 0;
+    margin-top: 90px;
   }
 
   .price__list {
@@ -130,6 +134,7 @@
 
   .price__list tr:first-child td {
     padding: 8px 0;
+    padding-top: 12px;
   }
 
   .price__name {
@@ -154,6 +159,14 @@
   .price__hit {
     top: -2px;
     left: 4px;
+  }
+
+  .price__tariff {
+    font-size: 16px;
+  }
+
+  .price__tariff span {
+    font-size: 18px;
   }
 }
 

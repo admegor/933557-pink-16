@@ -2,13 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>HTML Academy: Пинк ✪ Конкурс</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+
     <header class="page-header">
       <nav class="main-nav main-nav--closed">
         <div class="main-nav__wrapper">
@@ -23,13 +24,13 @@
             <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           </div>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item ">
               <a href="photo.html">Фотографии</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item  site-list__item--active">
               <a href="form.html">Конкурс</a>
             </li>
             <li class="site-list__item">
@@ -54,17 +55,16 @@
             <form action="https://echo.htmlacademy.ru" method="post">
               <div class="form__flex-wrapper">
 
-
               <fieldset class="form__name">
                 <legend class="form__name-header">Контактная информация</legend>
                 <ul class="form__name-list">
                   <li class="form__name-item">
                     <label for="last-name">Фамилия:</label>
-                    <input type="text" id="last-name" name="last-name" placeholder="Укажите фамилию *" required>
+                    <input type="text" id="last-name" name="lastname" placeholder="Укажите фамилию *">
                   </li>
                   <li class="form__name-item">
                     <label for="first-name">Имя:</label>
-                    <input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *" required>
+                    <input type="text" id="first-name" name="first-name" placeholder="Введите ваше имя *">
                   </li>
                   <li class="form__name-item">
                       <label for="middle-name">Отчество:</label>
@@ -112,7 +112,7 @@
                     </li>
                     <li class="form__contacts-item">
                         <label for="email-address">адрес почты</label>
-                        <input type="email" id="email-address" name="email-address" placeholder="Введите почту *" required>
+                        <input type="email" id="email-address" name="email-address" placeholder="Введите почту *">
                     </li>
                   </ul>
               </fieldset>
@@ -151,7 +151,7 @@
 
     </main>
 
-    <footer class="page-footer page-footer__page-form">
+    <footer class="page-footer page-footer--inner-page">
       <div class="page-footer__wrapper">
           <picture>
               <source media="(min-width:960px") srcset="img/logo-pink-blue-desktop.svg">
@@ -196,6 +196,18 @@
       </div>
     </footer>
 
+    <section class="modal modal__error">
+      <b class="modal__header">Что-то пошло не так!</b>
+      <p class="modal__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="button__green button__green--modal">Ок</button>
+    </section>
+
+    <section class="modal modal__success">
+        <b class="modal__header">Ваша заявка отправлена</b>
+        <p class="modal__message">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <button class="button__green button__green--modal">Закрыть окно</button>
+      </section>
+
     <script>
         var navMain = document.querySelector('.main-nav');
         var navToggle = document.querySelector('.main-nav__toggle');
@@ -208,6 +220,66 @@
             navMain.classList.add('main-nav--closed');
             navMain.classList.remove('main-nav--opened');
           }
+        });
+      </script>
+
+      <!-- <script>
+        var form = document.querySelector("form");
+        var popupError = document.querySelector(".modal__error");
+        var popupSuccess = document.querySelector(".modal__success");
+        var close = document.querySelector(".button__green");
+        var name = document.querySelector("[name=first-name]");
+        // var lastname = popup.querySelector("[name=lastname]");
+
+        console.log(name);
+
+        form.addEventListener("submit", function (evt) {
+          if (!name.value) {
+            evt.preventDefault();
+            // popupError.classList.add("modal-show");
+            console.log("Нужно ввести фамилию, имя и email");
+          }
+          else {
+            console.log("Форма успешно отправлена!");
+            popupSuccess.classList.add("modal-show");
+          }
+        });
+
+        // close.addEventListener("click", function (evt) {
+        //   evt.preventDefault();
+        //   popupError.classList.remove("modal-show");
+        // });
+      </script> -->
+
+      <script>
+        var form = document.querySelector(".form");
+        var successPopup = document.querySelector(".modal__success");
+        var failedPopup = document.querySelector(".modal__error");
+        // var email = document.querySelector("[name=email]");
+        var userName = document.querySelector("[name=lastname]");
+        var surname = document.querySelector("[name=first-name]");
+        var popupOK = document.querySelector(".button__green--modal");
+        var popupClose = document.querySelector(".button__green--modal");
+
+        form.addEventListener("submit", function (evt) {
+          evt.preventDefault();
+          if (!userName.value || !surname.value) {
+            failedPopup.classList.add("modal-show");
+          } else {
+            successPopup.classList.add("modal-show");
+          }
+        });
+
+        popupClose.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          console.log("Нужно ввести фамилию, имя и email");
+          failedPopup.classList.remove("modal-show");
+        });
+
+        popupOK.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          console.log("Форма успешно отправлена!");
+          successPopup.classList.remove("modal-show");
         });
       </script>
 

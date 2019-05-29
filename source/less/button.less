@@ -1,11 +1,4 @@
 .button {
-  font-family: "OpenSansBold", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 18px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-
   display: block;
   position: relative;
   width: 274px;
@@ -13,22 +6,68 @@
   margin-left: -140px;
   padding-top: 14px;
   padding-bottom: 16px;
+
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button__ellipse {
+  margin-bottom: 31px;
   border-radius: 50px;
 
-  &--ellipse {
-    margin-bottom: 31px;
+  color: @white;
+  border: 3px solid @white;
 
-    color: @white;
-    border: 3px solid @white;
-  }
-
-  &--ellipse:hover {
+  &:hover {
     color: @pink;
     background-color: @white;
   }
 
-  &--ellipse:active {
+  &:active {
     color: @pink-opacity;
+  }
+}
+
+.button__filter {
+  border-radius: 50px;
+  color: @white;
+  border: 3px solid @white;
+
+  &--action {
+    background-color: @grey;
+    color: @pink;
+    border: 3px solid @pink;
+
+    margin-bottom: 15px;
+
+    &:hover {
+      background-color: @pink;
+      color: @white;
+    }
+
+    &:active {
+      color: @white-opacity10;
+    }
+  }
+
+  &--cancel {
+    background-color: @grey;
+    color: @cosmos-opacity10;
+    border: 3px solid @cosmos-opacity10;
+
+    &:hover {
+      color: @cosmos-opacity30;
+      border: 3px solid @cosmos-opacity30;
+    }
+
+    &:active {
+      background-color: @cosmos-opacity30;
+      color: @cosmos-opacity10;
+    }
   }
 }
 
@@ -49,6 +88,10 @@
 
   border: 2px solid @green;
   border-radius: 2px;
+
+  &--modal {
+    margin-left: 10px;
+  }
 }
 
 .form__required-field {
@@ -71,10 +114,33 @@
   .button--ellipse {
     margin-top: 25px;
   }
+
+  .button {
+    width: 260px;
+    margin-left: -125px;
+    margin-bottom: 25px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .button--ellipse {
     margin-top: 80px;
+  }
+
+  .filter__buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 90px;
+  }
+
+  .button__filter {
+    width: 183px;
+    margin-left: 0;
+    left: 0;
+  }
+
+  .button__filter--cancel {
+    margin-left: 44px;
   }
 }

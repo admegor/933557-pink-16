@@ -24,3 +24,27 @@
     margin-top: 30px;
   }
 }
+
+.promo__slogan br {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .promo__slogan-wrapper {
+    width: 620px;
+    padding-top: 50px;
+  }
+
+  .promo__slogan {
+    font-size: 40px;
+    line-height: 47px;
+
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+
+  .promo__slogan br {
+    display: inline;
+  }
+}

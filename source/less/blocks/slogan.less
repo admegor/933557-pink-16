@@ -1,0 +1,67 @@
+.slogan {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.slogan__intro,
+.slogan__bottom {
+  display: block;
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+
+  padding-top: 45px;
+  padding-bottom: 50px;
+
+  color: @cosmos;
+}
+
+.slogan__bottom {
+  padding-top: 22px;
+  padding-bottom: 43px;
+}
+
+@media (min-width: @tablet-width) {
+  .slogan {
+    width: 460px;
+  }
+
+  .slogan__intro {
+    font-size: 18px;
+
+    padding-top: 90px;
+    padding-bottom: 77px;
+  }
+
+  .slogan__intro br {
+    display: none;
+  }
+
+  .slogan__bottom {
+    font-size: 18px;
+
+    padding-top: 41px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slogan {
+    width: 940px;
+  }
+
+  .slogan__intro {
+    padding-bottom: 90px;
+  }
+
+  .slogan__intro br {
+    display: inline-block;
+  }
+
+  .slogan__bottom {
+    padding-top: 8px;
+    padding-bottom: 65px;
+  }
+}

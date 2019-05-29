@@ -5,7 +5,8 @@
 .contacts__wrapper {
   width: 280px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 42px;
+  margin-bottom: 25px;
 }
 
 .contacts__slogan {
@@ -25,27 +26,41 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-top: 44px;
+  margin-top: 30px;
 }
 
-.contacts__list b {
-  font-family: "OpenSansBold", "Arial", sans-serif;
-  font-size: 18px;
-  text-align: center;
-  color: @cosmos;
-}
-
-.contacts__list p {
+.contacts__list a,
+.contacts__list address {
   .reset();
   font-family: "OpenSanslight", "Arial", sans-serif;
   font-size: 24px;
   text-align: center;
+  text-decoration: none;
+  font-style: normal;
 
   color: @pink;
 }
 
-.contacts__list li {
+.contacts__list a:hover {
+  color: @cosmos;
+  text-decoration: underline;
+}
+
+.contacts__list a:active {
+  opacity: 0.3;
+}
+
+.contacts__item {
   margin-bottom: 20px;
+}
+
+.contacts__header {
+  .reset();
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 18px;
+  text-align: center;
+
+  color: @cosmos;
 }
 
 .contacts__map {
@@ -73,12 +88,14 @@
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
     width: 620px;
-    padding-top: 56px;
+    padding-top: 120px;
+    margin-bottom: 0;
   }
 
   .contacts__slogan {
     font-size: 40px;
     line-height: 50px;
+    margin-bottom: 40px;
   }
 
   .contacts__item {
@@ -96,7 +113,8 @@
   }
 
   .contacts__map {
-    height: 375px;
+    height: 355px;
+    margin-bottom: 20px;
 
     background: url("../../img/bg-map-tablet@1x.jpg") no-repeat 50% 73%;
   }
@@ -108,7 +126,7 @@
     height: 62px;
 
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 0;
 
     background: url("../img/bg-triangle-white-footer.svg") no-repeat 50% 100%;

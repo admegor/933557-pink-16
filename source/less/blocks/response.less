@@ -1,7 +1,7 @@
 .response {
   width: 280px;
   margin: 0 auto;
-  padding-top: 47px;
+  padding-top: 42px;
 }
 
 .response__wrapper {
@@ -11,6 +11,7 @@
 
 .response__name {
   display: block;
+  margin-bottom: 14px;
 
   font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 18px;
@@ -25,7 +26,9 @@
 }
 
 .response__answer-text {
+  .reset();
   display: block;
+
 
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 14px;
@@ -43,7 +46,7 @@
 @media (min-width: @tablet-width) {
   .response {
     width: 620px;
-    padding-top: 47px;
+    padding-top: 37px;
   }
 
   .response__users {
@@ -52,11 +55,12 @@
 
   .response__answer-text {
     font-size: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .response__name {
     font-size: 20px;
+    margin-bottom: 2px;
   }
 
   .response__personal-information {

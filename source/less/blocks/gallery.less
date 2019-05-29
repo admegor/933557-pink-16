@@ -18,10 +18,102 @@
 }
 
 .gallery__list {
-  .reset;
+  .reset();
+}
+
+.gallery__item {
+  .reset();
 }
 
 .gallery__photo {
-  margin: auto 20px;
   vertical-align: top;
+}
+
+.gallery__popular::before {
+  content: "Панорама дня";
+  position: absolute;
+
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 6px;
+
+
+  width: 140px;
+  height: 30px;
+
+  top: 0;
+  right: 20px;
+
+  background-color: @pink;
+  color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__wrapper {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .gallery__photo--popular {
+    height: 509px;
+  }
+
+  .gallery__popular::before {
+    top: 57px;
+  }
+
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery__list .gallery__item:nth-child(2n) {
+    margin-left: 20px;
+  }
+
+  .gallery__item {
+    width: 300px;
+  }
+
+  .gallery__comment {
+    padding-top: 21px;
+    padding-left: 27px;
+    padding-right: 32px;
+  }
+
+  .gallery__photo {
+    width: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__popular {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .gallery__popular::before {
+    top: 54px;
+    right: 130px;
+  }
+
+  .gallery__photo--popular {
+    height: auto;
+  }
+
+  .gallery__wrapper {
+    width: 940px;
+  }
+
+  .gallery__list .gallery__item {
+    margin-left: 20px;
+  }
+
+  .gallery__list .gallery__item:nth-child(3n+1) {
+    margin-left: 0;
+  }
 }
